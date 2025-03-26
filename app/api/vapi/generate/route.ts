@@ -45,16 +45,18 @@ export async function POST(request: Request) {
         return Response.json({
             success: true,
             clientMessages: [
-                { type: "model-output", data: "Your mock interview is ready!" }
+                { type: "status-update", data: "Generating your mock interview..." },
+                { type: "model-output", data: "Here are your interview questions." }
             ],
             questions: [
-                "Tell me about yourself.",
-                "What are your strengths and weaknesses?",
-                "How do you handle conflicts in a team?",
-                "Explain event loop in Node.js.",
-                "What are React hooks?"
+                { type: "transcript", data: "Tell me about yourself." },
+                { type: "transcript", data: "What are your strengths and weaknesses?" },
+                { type: "transcript", data: "How do you handle conflicts in a team?" },
+                { type: "transcript", data: "Explain event loop in Node.js." },
+                { type: "transcript", data: "What are React hooks?" }
             ]
         }, { status: 200 });
+
 
     } catch (error) {
         console.error(error);
