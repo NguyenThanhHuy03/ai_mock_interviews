@@ -32,7 +32,7 @@ export async function POST(request: Request) {
             role: role,
             type: type,
             level: level,
-            techstack: Array.isArray(techstack) ? techstack : techstack.split(","), //Nếu techstack đã là một mảng, nó sẽ giữ nguyên giá trị.
+            techstack: techstack.split(","), //Nếu techstack đã là một mảng, nó sẽ giữ nguyên giá trị.
             questions: JSON.parse(questions),
             userId: userid,
             finalized: true,
