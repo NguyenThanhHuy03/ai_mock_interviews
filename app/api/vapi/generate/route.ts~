@@ -42,20 +42,7 @@ export async function POST(request: Request) {
 
         await db.collection("interviews").add(interview)
 
-        return Response.json({
-            success: true,
-            clientMessages: [
-                { type: "model-output", data: "Your mock interview is ready!" }
-            ],
-            questions: [
-                "Tell me about yourself.",
-                "What are your strengths and weaknesses?",
-                "How do you handle conflicts in a team?",
-                "Explain event loop in Node.js.",
-                "What are React hooks?"
-            ]
-        }, { status: 200 });
-
+        return Response.json({ success: true }, { status: 200 });
     } catch (error) {
         console.error(error);
 
