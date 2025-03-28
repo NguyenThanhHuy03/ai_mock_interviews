@@ -138,7 +138,7 @@ export async function getLatestInterviews(params: GetLatestInterviewsParams): Pr
         .orderBy('createdAt', 'desc')
         .where('finalized', '==', true)
         .where('userId', '!=', userId)
-        .limit()
+        .limit(limit)
         .get()
 
     return interviews.docs.map((doc) => ({

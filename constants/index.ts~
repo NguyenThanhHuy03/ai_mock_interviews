@@ -1,6 +1,6 @@
-// import { CreateAssistantDTO } from "@vapi-ai/web/dist/api";
-// import { z } from "zod";
-//
+import { CreateAssistantDTO } from "@vapi-ai/web/dist/api";
+import { z } from "zod";
+
 export const mappings = {
   "react.js": "react",
   reactjs: "react",
@@ -223,7 +223,7 @@ export const dummyInterviews: Interview[] = [
         type: "Mixed",
         techstack: ["Node.js", "Express", "MongoDB", "React"],
         level: "Senior",
-        questions: ["What is Node.js"],
+        questions: ["What is Node.js?"],
         finalized: false,
         createdAt: "2024-03-16T10:00:00Z",
     },
